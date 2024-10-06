@@ -12,23 +12,23 @@
     
     <!-- Small informational text -->
     <p class="info-text">
-      No emmagatzemo ni puc accedir a les imatges que pengeu. Es pot consultar la programació del web <a href="https://github.com/cercle-antihalloween/cercle-antihalloween.github.io" target="_blank">aquí</a>. Si algú sap fer webs (no com jo) i li ve de gust millorar-la, és lliure de contactar-me o fer una pull request al github.
+       No emmagatzemo ni puc accedir a les imatges que pengeu. Es pot consultar la programació del web aquí. Si algú sap fer webs (no com jo) i li ve de gust millorar-la, és lliure de contactar amb mi o fer una pull request al GitHub.
     </p>
 
     <!-- Option 1: Upload an image from the device -->
     <h2 class="option-header">Selecciona una imatge</h2>
-    <h3 class="option-header">Opció 1: Penja una imatge des del dispositiu</h2>
+    <h3 class="option-header">Opció 1: Penja una imatge des del dispositiu</h3>
     <input type="file" id="imageInput" accept="image/*" />
     
     <!-- Option 2: Upload an image link -->
-    <h3 class="option-header">Opció 2: Copia l'enllaç a una imatge</h2>
+    <h3 class="option-header">Opció 2: Copia l'enllaç a una imatge</h3>
     <input type="text" id="imageUrlInput" placeholder="Enllaç de la foto" />
     <button id="loadImageButton">Carrega la imatge</button>
 
     <!-- Line break before confirm button -->
     <br>
 
-    <h2 class="option-header">Clica el botó per enmarcar la imatge</h2>
+    <h2 class="option-header">Clica el botó per emmarcar la imatge</h2>
     <div>
       <button id="confirmButton" disabled>Emmarca</button>
     </div>
@@ -38,9 +38,25 @@
       <canvas id="canvas"></canvas>
     </div>
 
+    <h2 class="option-header">Comparteix-ho a les xarxes!</h2>
+
+    <!-- Twitter Share Button -->
+    <div>
+      <a href="https://twitter.com/intent/tweet?text=He%20emmarcat%20la%20meva%20foto%20de%20perfil%20amb%20el%20cercle%20d'acció%20antihalloween!%20Fes-ho%20tu%20també!%20https://cercle-antihalloween.github.io/%20@castanyadisme" target="_blank">
+        <button id="tweetButton">Comparteix a Twitter</button>
+      </a>
+    </div>
+
+    <!-- WhatsApp Share Button -->
+    <div>
+      <a href="https://api.whatsapp.com/send?text=He%20emmarcat%20la%20meva%20foto%20de%20perfil%20amb%20el%20cercle%20d'acció%20antihalloween!%20Fes-ho%20tu%20també!%20https://cercle-antihalloween.github.io/" target="_blank">
+        <button id="whatsappButton">Comparteix a WhatsApp</button>
+      </a>
+    </div>
+
+    
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
