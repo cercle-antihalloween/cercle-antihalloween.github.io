@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 600px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    text-align: left; /* Align text to the left (ragged right) */
+}
+
+h1 {
+    margin-bottom: 10px; /* Add some space below the title */
+}
+
+h2 {
+    font-size: 24px; /* Set a larger font size for h2 */
+    margin: 15px 0; /* Add space above and below the h2 headings */
+}
+
+h3 {
+    font-size: 18px; /* Set a smaller font size for h3 */
+    margin: 10px 0; /* Add space above and below the h3 headings */
+}
+
+.info-text {
+    font-size: 14px; /* Smaller font size for the informational text */
+    color: #555; /* Slightly darker grey for better readability */
+    margin-bottom: 20px; /* Space below the informational text */
+}
+
+canvas {
+    border: 1px solid #ccc; /* Add a border to the canvas for visibility */
+    max-width: 100%; /* Responsive width */
+    max-height: 400px; /* Limit the height to 400px */
+    display: block; /* Ensure it behaves as a block element */
+    margin: 20px auto; /* Center the canvas */
+}
+
+input[type="file"],
+input[type="text"],
+button {
+    margin: 10px;
+}
+

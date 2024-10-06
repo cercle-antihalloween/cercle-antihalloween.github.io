@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cercle antihalloween</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Emmarca una foto amb el cercle d'acció antihalloween</h1>
+    
+    <!-- Small informational text -->
+    <p class="info-text">
+      No emmagatzemo ni puc accedir a les imatges que pengeu. Es pot consultar la programació del web <a href="https://github.com/cercle-antihalloween/cercle-antihalloween.github.io" target="_blank">aquí</a>. Si algú sap fer webs (no com jo) i li ve de gust millorar-la, és lliure de contactar-me o fer una pull request al github.
+    </p>
+
+    <!-- Option 1: Upload an image from the device -->
+    <h2 class="option-header">Selecciona una imatge</h2>
+    <h3 class="option-header">Opció 1: Penja una imatge des del dispositiu</h2>
+    <input type="file" id="imageInput" accept="image/*" />
+    
+    <!-- Option 2: Upload an image link -->
+    <h3 class="option-header">Opció 2: Copia l'enllaç a una imatge</h2>
+    <input type="text" id="imageUrlInput" placeholder="Enllaç de la foto" />
+    <button id="loadImageButton">Carrega la imatge</button>
+
+    <!-- Line break before confirm button -->
+    <br>
+
+    <h2 class="option-header">Clica el botó per enmarcar la imatge</h2>
+    <div>
+      <button id="confirmButton" disabled>Emmarca</button>
+    </div>
+    
+    <!-- Image Preview Section -->
+    <div id="previewContainer">
+      <canvas id="canvas"></canvas>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
