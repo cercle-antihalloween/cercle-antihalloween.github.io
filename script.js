@@ -2,6 +2,7 @@ const imageInput = document.getElementById("imageInput");
 const imageUrlInput = document.getElementById("imageUrlInput");
 const loadImageButton = document.getElementById("loadImageButton");
 const confirmButton = document.getElementById("confirmButton");
+const downloadButton = document.getElementById("downloadButton");
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -75,5 +76,29 @@ confirmButton.addEventListener("click", function () {
       ctx.drawImage(overlayImage, offsetX, offsetY, minSize, minSize);
     };
   }
+});
+
+// Handle when the "Emmarca" button is clicked
+document.getElementById('confirmButton').addEventListener('click', function() {
+  const canvas = document.getElementById('canvas');
+  
+  // Assuming your code for drawing the image on the canvas goes here
+  // After drawing on the canvas, show the download button
+  
+  const downloadButton = document.getElementById('downloadButton');
+  downloadButton.style.display = 'block'; // Show the download button
+
+  // Add the download functionality
+  downloadButton.addEventListener('click', function() {
+    const image = canvas.toDataURL('image/jpeg', 0.8);  // Set image quality (0 to 1), 0.9 for good quality
+    
+    // Create a temporary link element for downloading
+    const link = document.createElement('a');
+    link.href = image;
+    link.download = 'imatge_emmarcada.jpg';  // Set the filename for download
+    document.body.appendChild(link);  // Append the link to the body temporarily
+    link.click();  // Simulate a click on the link to trigger the download
+    document.body.removeChild(link);  // Clean up by removing the temporary link
+  });
 });
 
